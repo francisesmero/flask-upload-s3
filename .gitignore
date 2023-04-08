@@ -1,3 +1,13 @@
+# ignore distribution files
+dist/
+build/
+*.egg-info/
+
 # ignore files
 __pycache__/
 flask-env/
+
+# ignore compiled Python files
+*.pyc
+*.pyo
+*.pyd

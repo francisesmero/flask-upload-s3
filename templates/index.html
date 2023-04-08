@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+{% extends 'bootstrap/base.html' %}
+
+
+
+{% block content %}
+<div class="container my-5" style="margin-top:10px;">
+  {% if error %}
+  <div class="alert alert-danger" role="alert">
+    {{ error }}
+  </div>
+  {% elif success %}
+  <div class="alert alert-success" role="alert">
+    {{ success }}
+  </div>
+  {% endif %}
+
+ 
+  <div class="card-container container">
+  <form method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="file">Upload CSV file:</label>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="file" name="file" accept=".csv">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Upload</button>
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+  <span class="sr-only">Loading...</span>
+  </form>
+  </div>
+</div>
+{% endblock %}

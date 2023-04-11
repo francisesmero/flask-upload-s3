@@ -11,3 +11,5 @@ flask-env/
 *.pyc
 *.pyo
 *.pyd
+
+flask_key_pair.pem

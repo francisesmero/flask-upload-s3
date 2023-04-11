@@ -46,4 +46,4 @@ def upload_file():
 
 if __name__ == '__main__':
     port = os.getenv('PORT', default=8080)
-    app.run(debug=True, port=port)
+    app.run(host='0.0.0.0', port=port)

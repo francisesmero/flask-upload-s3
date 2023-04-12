@@ -6,9 +6,11 @@ setup(
     packages=find_packages(),
     install_requires=[
         'flask',
-        'flask-bootstrap'
-        'boto3'
-        
+        'flask-bootstrap',
+        'boto3',
+        'Flask_SQLAlchemy',
+        'Flask-Table',
+        'botocore'
         # add any other required packages here
     ],
 )

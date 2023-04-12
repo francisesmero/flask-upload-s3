@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Dashboard</h1>
+  {% if my_models %}
+    {{ my_table }}
+  {% else %}
+    <p>No data available.</p>
+  {% endif %}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  {{ my_table.export().safe }}
+{% endblock %}
